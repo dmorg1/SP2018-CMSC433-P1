@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/proj1.css">
+	</head>
+	<body>
+		<div id="nav">
+			<a id="currNavLink" class="navLink" href="proj1.html">Home</a>
+			<a class="navLink" href="statistics.html">Statistics</a>
+		</div>
+		
+		<div id="body">
+			<div id="status">
+				<p id="statusText">Level Progress:</p>
+				<div id="bckgrdBar">
+					<div id="prgrssBar"></div>
+				</div>
+			</div>
+	
+			<div id="time">
+				<canvas id="canvas" width="410" height="410"></canvas>
+		
+				<div id="input">
+					<p id="inputTitle"> What time does the clock say? </p>
+					<div id="inputFields">
+						<label id="hourLabel" for="hour">Hour: </label>
+						<!--<input id="hour" type="text" name="hr" size="1">-->
+						<select id="hour">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12" selected>12</option>
+						</select>
+						<label for="minute">Minute: </label>
+						<!--<input id="minute" type="text" name="min" size="1">-->
+						<select id="minute">
+							<option value="0">0</option>
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50">50</option>
+							<option value="55">55</option>
+						</select>
+					</div><br>
+					<input id="set" onclick="checkAnswer()" type="button" value="Check Your Answer">
+				</div>
+				<br>
+			
+				<div id="conf">
+					<p id="confText"></p>
+					<input id="confBttn" onclick="generateNewProblem()" type="button" value="Next Problem >>">
+				</div>
+			</div>
+		
+			<div id="overlay">
+				<div id="overlayBox">
+					<div onclick="closeOverlay()" id="overlayClose" class="noselect">X</div>
+					<p id="overlayTitle"></p>
+					<p id="overlayText"></p>
+					<div id="login">
+						<div id="loginFields">
+							<label for="hour">First Name: </label>
+							<input id="fname" type="text" name="fname"><br>
+							<div id="lnameDiv">
+								<label for="minute">Last Name: </label>
+								<input id="lname" type="text" name="lname">
+							</div>
+							<input id="loginBttn" onclick="login()" type="button" value="   Play   ">
+						</div>
+						<a href="statistics.html">Teachers, click here for statistics</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script src="js/clock.js"></script>
+		<script src="js/proj1.js"></script>
+	</body>
+</html>

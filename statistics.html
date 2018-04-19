@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/proj1.css">
+	</head>
+	<body>
+		<div id="nav">
+			<a class="navLink" href="proj1.html">Home</a>
+			<a id="currNavLink" class="navLink" href="statistics.html">Statistics</a>
+		</div>
+		
+		<div id="statsBody">
+		
+			<!--<div id="statsNav">
+				<div onclick="test()" class="statNavLink" id="graphsNav">Graphs</div>
+				<div onclick="" class="statNavLink" id="tableNav">Data Tables</div>
+			</div>-->
+			
+			<div id="note">
+				<p id="noteTitle"> About This Table </p>
+				<p id="noteText">The table below contains a list of all of the students and their
+				respective data. In the columns titled "Level #", the fraction in the rows beneath
+				are represented as # Correct Attempts / #Total Attempts. The columns titled "%"
+				have the percent value of the preceding column's fraction.</p>
+			</div>
+		
+			<div id="table">
+				<table id="dataTable">
+				</table>
+			</div>
+		</div>
+		
+		<div id="overlay">
+				<div id="overlayBox">
+					<div onclick="closeOverlay()" id="overlayClose" class="noselect">X</div>
+					<p id="overlayTitle"></p>
+					<p id="overlayText"></p>
+					<div id="login">
+						<div id="loginFields">
+							<div id="passwrdDiv">
+								<label for="minute">Password: </label>
+								<input id="password" type="password" name="password">
+							</div>
+							<input id="loginBttn" onclick="checkPassword()" type="button" value="   Login   ">
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		<script src="js/statistics.js"></script>
+	</body>
+</html>
